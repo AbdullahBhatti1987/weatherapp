@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, skyblue, pink);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+}
+
+div.current {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+div.current div.search {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+div.current div.search input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+div.current div.status {
+    width: 100%;
+}
+
+div.current div.status div.tempreture {
+    text-align: center;
+}
+
+div.current div.status div.tempreture h1,
+div.current div.status div.tempreture h3 {
+    margin: 10px 0;
+}
+
+div.current div.status div.tempreture p {
+    font-size: 14px;
+    padding: 5px 20px;
+    text-align: justify;
+}
+
+div.current div.status div.feel {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+div.current div.status div.feel div.boxes {
+    width: calc(50% - 10px);
+    min-height: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.current div.status div.feel div.boxes p:first-child {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+div.feature {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div.feature div.daily,
+div.feature div.monthly {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.feature div.daily h3,
+div.feature div.monthly h3 {
+    font-size: 16px;
+    padding-bottom: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+div.feature div.size {
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+div.feature div.hourly,
+div.feature div.date {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+div.feature div.hourly div.hour,
+div.feature div.date div.time {
+    flex: 0 0 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+div.feature div.hourly div.hour span:first-child,
+div.feature div.date div.time span:first-child {
+    font-size: 12px;
+}
+
+div.feature div.hourly div.hour h4 sup,
+div.feature div.date h4 sup {
+    font-size: 14px;
+}
+
+div.winds {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    
+}
+
+div.winds div.ui,
+div.winds div.ux {
+    flex: 1;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+div.winds div.ui h6,
+div.winds div.ux h6 {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+}
+
+div.winds div.ux div.wind {
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+div.winds div.ux img {
+    width: 100px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.current, div.feature {
+        width: 100%;
+    }
+
+    div.feature {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.winds {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.winds div.ui, div.winds div.ux {
+        width: 100%;
+    }
+}
+
+div.feature div.size::-webkit-scrollbar {
+    height: 5px;
+}
+
+div.feature div.size::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+div.feature div.size::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
